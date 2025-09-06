@@ -1,4 +1,4 @@
-# 30plus-frontend-projects
+
 # 30+ Frontend Projects (HTML • CSS • JavaScript)
 
 This repo contains mini projects built using HTML, CSS, and JavaScript—based.
