@@ -21,8 +21,7 @@ body{
 }
 
 
-
-search{
+.search{
     width:100%;
     display: flex;
     align-items: center;
@@ -93,4 +92,16 @@ search{
 .humidity, .wind{
     font-size: 28px;
     margin-top: -6px;
+}
+
+.weather{
+    display: none;
+}
+
+.err{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: red;
 }
