@@ -9,7 +9,7 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 | #  | Project Name        | Demo Link                                                                 | Screenshot                              |
 |----|---------------------|---------------------------------------------------------------------------|-----------------------------------------|
 | 1  | **Weather App**  | **👉(https://azampasha-weather-app.netlify.app/)** | ![Project 1](assets/project-01.png)     |
-| 2  | **Project 2 Name**  | `[Live Demo](soon..)`| ![Project 2](assets/project-02.png)     |
+| 2  | **To-do-app**  | `[Live Demo](soon..)`| ![Project 2](assets/project-02.png)     |
 | 3  | **Project 3 Name**  | `[Live Demo](soon..)`| ![Project 3](assets/project-03.png)     |
 
 
