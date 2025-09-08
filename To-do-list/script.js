@@ -32,7 +32,6 @@ listContainer.addEventListener("click", function(e){
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
 }
-
 function showTask(){
     let savedTasks = localStorage.getItem("data");
     if (savedTasks) {
