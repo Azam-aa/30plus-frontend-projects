@@ -50,12 +50,12 @@ background: #001e4d;
     cursor: pointer;
 }
 
-btn:hover{
+.btn:hover{
     background: #222;
     color: #fff;
 }
 
-.next-btn{
+#next-btn{
     background: #001e4d;
     color: #fff;
     font-weight: 500;
