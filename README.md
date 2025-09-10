@@ -10,9 +10,9 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 |----|---------------------|---------------------------------------------------------------------------|-----------------------------------------|
 | 1  | **Weather App**  | **👉(https://azampasha-weather-app.netlify.app/)** | ![Project 1](assets/project-01.png)     |
 | 2  | **To-do-app**  | **👉(https://azam-to-do-list-app.netlify.app/)**| ![Project 2](assets/project-02.png)     |
-| 3  | **Project 3 Name**  | `[Live Demo](soon..)`| ![Project 3](assets/project-03.png)     |
+| 3  | **Project 3 Name**  | **👉(https://azam-quiz-app.netlify.app/)**| ![Project 3](assets/project-03.png)     |
 
-
+https://azam-quiz-app.netlify.app/
 
 ##  How to Run Locally
 
