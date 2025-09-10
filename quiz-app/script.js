@@ -23,7 +23,7 @@ const questions = [
         question : "which is largest desert in the world",
         answers : [
             { text : "Kalahari", correct : false},
-            { text : "Gobi", correct : true},
+            { text : "Gobi", correct : false},
             { text : "Sahara", correct : false},
             { text : "Antarctica", correct :true},
         ]
@@ -56,7 +56,7 @@ function startQuiz(){
 
 function showQuestion(){
     resetState();
-    let currentQuestionIndex = questions[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
     let  questionsNo = currentQuestionIndex + 1;
     questionsElement.innerHTML = questionsNo + ". " + currentQuestion.question;
 
@@ -68,7 +68,7 @@ function showQuestion(){
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
-        nextButton.addEventListener("click", selectAnswer)
+        button.addEventListener("click", selectAnswer)
     });
 }
 
@@ -81,7 +81,7 @@ function  resetState(){
 
 function selectAnswer(e){
     const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.dataset.correct === "true";
+    const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct");
         score++;
