@@ -9,14 +9,20 @@ const symbols = "!@#$%^&*()_+~`|}{[]:;?><,./-="
 const allChars = uppercase + lowercase + numbers + symbols;
 
 function createPassword() {
-    let password = "";
-    password += uppercase[Math.floor(Math.random() * uppercase.length)];
-    password += lowercase[Math.floor(Math.random() * lowercase.length)];
-    password += numbers[Math.floor(Math.random() * numbers.length)];
-    password += symbols[Math.floor(Math.random() * symbols.length)];
+    let pwd = "";
+    pwd += uppercase[Math.floor(Math.random() * uppercase.length)];
+    pwd += lowercase[Math.floor(Math.random() * lowercase.length)];
+    pwd += numbers[Math.floor(Math.random() * numbers.length)];
+    pwd += symbols[Math.floor(Math.random() * symbols.length)];
 
-    while(length > password.length) {
-        password += allChars[Math.floor(Math.random() * allChars.length)];
+    while(length > pwd.length) {
+        pwd += allChars[Math.floor(Math.random() * allChars.length)];
     }
-    passwprdBox.value = password;
+    password.value = pwd;
+}
+
+function copyPassword() {
+    navigator.clipboard.writeText(password.value).then(() => {
+        alert("Copied!");
+    });
 }
