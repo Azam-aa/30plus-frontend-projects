@@ -12,7 +12,7 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 | 2  | **To-do-app**  | **👉(https://azam-to-do-list-app.netlify.app/)**| ![Project 2](assets/project-02.png)     |
 | 3  | **Quiz App**  | **👉(https://azam-quiz-app.netlify.app/)**| ![Project 3](assets/project-03.png)     |
 | 4  | **Random Password Genertor**  | **👉(https://random-passowrd-by-azam.netlify.app/)**| ![Project 3](assets/project-04.png)     |
-| 5  | **Project 5**
+| 5  | **Simple Calculator** | 
 
 ##  How to Run Locally
 
