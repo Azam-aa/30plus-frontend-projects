@@ -14,7 +14,10 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 | 4  | **Random Password Genertor**  | **👉(https://random-passowrd-by-azam.netlify.app/)**| ![Project 4](assets/project-04.png)     |
 | 5  | **Notes App** | **👉(https://notes-app-by-azam.netlify.app/)**| ![Project 5](assets/project-05.png)     | 
 | 6  | **Age Calculator** | **👉(https://age-cal-by-azam.netlify.app/)**| ![Project 6](assets/project-06.png)     |
-| 7  | **Quote Generator** | **👉(https://quote-generator-by-azam.netlify.app/)**| ![Project 7](assets/project-07.png)     |  
+| 7  | **Quote Generator** | **👉(https://quote-generator-by-azam.netlify.app/)**| ![Project 7](assets/project-07.png)     | 
+| 8  | **QR Generator** | **👉(https://qrcode-by-azam.netlify.app/)**| ![Project 8](assets/project-08.png)     | 
+
+
 ##  How to Run Locally
 
 
