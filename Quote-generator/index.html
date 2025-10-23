@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator (Local Data)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(135deg, rgb(183, 61, 181), rgb(28, 152, 174));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      .quote-box {
+        border-radius: 25px;
+        background-color: #fff;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 350px;
+        width: 500px;
+        padding: 30px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .quote-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #quote {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      #author {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #555;
+      }
+
+      .button-container {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      button {
+        border: none;
+        border-radius: 10px;
+        background: rgb(23, 255, 255);
+        color: #000;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+
+      button:hover {
+        background: rgb(0, 200, 200);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <div class="quote-container">
+        <p id="quote">Click 'New Quote' to load a quote.</p>
+        <span id="author"></span>
+      </div>
+
+      <div class="button-container">
+        <button id="new-quote">New Quote</button>
+        <button id="tweet">Tweet Quote</button>
+      </div>
+    </div>
+
+    <script>
+     
+      const localQuotes = [
+        {
+          "q": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+          "a": "Martin Luther King, Jr.",
+          "c": "110",
+          "h": "..."
+        },
+        {
+          "q": "Just as true humor is laughter at oneself, true humanity is knowledge of oneself.",
+          "a": "Alan Watts",
+          "c": "81",
+          "h": "..."
+        },
+        {
+          "q": "Most people get ahead during the time that others waste.",
+          "a": "Henry Ford",
+          "c": "56",
+          "h": "..."
+        },
+        {
+          "q": "The way we feel is the direct result of what we think.",
+          "a": "Peter A. Cohen",
+          "c": "54",
+          "h": "..."
+        },
+        {
+          "q": "The search for happiness is one of the chief sources of unhappiness.",
+          "a": "Eric Hoffer",
+          "c": "68",
+          "h": "..."
+        },
+        {
+          "q": "You may be disappointed if you fail, but you are doomed if you don't try. ",
+          "a": "Beverly Sills",
+          "c": "74",
+          "h": "..."
+        },
+        {
+          "q": "Some people want it to happen, some wish it would happen, others make it happen.",
+          "a": "Michael Jordan",
+          "c": "80",
+          "h": "..."
+        },
+        {
+          "q": "Those who seek the easy way do not seek the true way.",
+          "a": "Dogen",
+          "c": "53",
+          "h": "..."
+        },
+        {
+          "q": "The mind can calculate, but the spirit yearns, and the heart wants what the heart wants.",
+          "a": "Stephen King",
+          "c": "88",
+          "h": "..."
+        },
+        {
+          "q": "To forgive means pardoning the unpardonable.",
+          "a": "Gilbert Chesterton",
+          "c": "44",
+          "h": "..."
+        },
+        {
+          "q": "A man, as a general rule, owes very little to what he is born with - a man is what he makes of himself.",
+          "a": "Alexander Graham Bell",
+          "c": "103",
+          "h": "..."
+        },
+        {
+          "q": "Listen to the secret sound, the real sound, which is inside you.",
+          "a": "Kabir",
+          "c": "64",
+          "h": "..."
+        },
+        {
+          "q": "Smell the cheese often so you know when it is getting old.",
+          "a": "Spencer Johnson",
+          "c": "58",
+          "h": "..."
+        },
+        {
+          "q": "Trusting our intuition often saves us from disaster. ",
+          "a": "Anne Wilson Schaef",
+          "c": "53",
+          "h": "..."
+        },
+        {
+          "q": "We will now discuss in a little more detail the Struggle for Existence.",
+          "a": "Charles Darwin",
+          "c": "71",
+          "h": "..."
+        },
+        {
+          "q": "A life spent making mistakes is not only more honorable but more useful than a life spent doing nothing.",
+          "a": "George Bernard Shaw",
+          "c": "104",
+          "h": "..."
+        },
+        {
+          "q": "Be the change that you want to see in the world.",
+          "a": "Mahatma Gandhi",
+          "c": "48",
+          "h": "..."
+        },
+        {
+          "q": "Don't stop when you're tired. Stop when you're done.",
+          "a": "Marilyn Monroe",
+          "c": "52",
+          "h": "..."
+        },
+        
+      ];
+
+      const quoteText = document.getElementById("quote");
+      const authorText = document.getElementById("author");
+      const newQuoteBtn = document.getElementById("new-quote");
+      const tweetBtn = document.getElementById("tweet");
+      
+      function getQuote() {
+        if (localQuotes.length === 0) {
+            quoteText.textContent = "Error: No quotes available.";
+            authorText.textContent = "";
+            return;
+        }
+
+        
+        const randomIndex = Math.floor(Math.random() * localQuotes.length);
+
+
+        const quote = localQuotes[randomIndex];
+        
+        quoteText.textContent = `"${quote.q}"`;
+        authorText.textContent = `— ${quote.a}`;
+      }
+
+      function tweetQuote() {
+        const quote = quoteText.textContent;
+        const author = authorText.textContent;
+        
+        
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)} ${encodeURIComponent(author)}`;
+        
+       
+        window.open(tweetUrl, "_blank");
+      }
+
+     
+      newQuoteBtn.addEventListener("click", getQuote);
+      tweetBtn.addEventListener("click", tweetQuote); 
+
+    
+      getQuote();
+    </script>
+  </body>
+</html>
