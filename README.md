@@ -23,6 +23,5 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 
 Each project folder contains its own HTML, CSS, and JavaScript:
 
-```bash
-cd Project-01-Name
+
 
