@@ -25,4 +25,4 @@ Each project folder contains its own HTML, CSS, and JavaScript:
 
 ```bash
 cd Project-01-Name
-open index.html  # or simply double-click the file
+
