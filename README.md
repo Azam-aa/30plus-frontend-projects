@@ -16,6 +16,7 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 | 6  | **Age Calculator** | **👉(https://age-cal-by-azam.netlify.app/)**| ![Project 6](assets/project-06.png)     |
 | 7  | **Quote Generator** | **👉(https://quote-generator-by-azam.netlify.app/)**| ![Project 7](assets/project-07.png)     | 
 | 8  | **QR Generator** | **👉(https://qrcode-by-azam.netlify.app/)**| ![Project 8](assets/project-08.png)     | 
+| 8  | **JS** | **👉(https://jsproject-by-azam.netlify.app/)**| ![Project 8](assets/project-09.png)     | 
 
 
 ##  How to Run Locally
