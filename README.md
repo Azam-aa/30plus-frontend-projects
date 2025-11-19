@@ -1,5 +1,5 @@
 
-# 30+ Frontend Projects (HTML • CSS • JavaScript)
+# 30+ Frontend Projects (HTML • CSS • JavaScript(ES6+))
 
 This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 
