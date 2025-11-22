@@ -20,7 +20,7 @@ This repo contains mini projects built using HTML, CSS, and JavaScript—based.
 
 
 ##  How to Run Locally
-
+Download Zip file
 
 Each project folder contains its own HTML, CSS, and JavaScript:
 
